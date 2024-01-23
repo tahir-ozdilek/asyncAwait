@@ -44,7 +44,8 @@ namespace asyncAwait
     {
         public async Task<Egg> FryEggsAsync()
         {
-            await Task.Delay(5000);
+            Console.WriteLine("Egg is being prepared.");
+            await Task.Delay(3000);
 
             return new Egg();
         }
@@ -54,7 +55,8 @@ namespace asyncAwait
     {
         public async Task<Bacon> FryBaconAsync()
         {
-            await Task.Delay(5000);
+            Console.WriteLine("Bacon are being prepared.");
+            await Task.Delay(3000);
             return new Bacon();
         }
     }
@@ -62,7 +64,8 @@ namespace asyncAwait
     {
         public async Task<Pat> FryPatAsync()
         {
-            await Task.Delay(5000);
+            Console.WriteLine("Pat is being Pat.");
+            await Task.Delay(3000);
             return new Pat();
         }
     }
