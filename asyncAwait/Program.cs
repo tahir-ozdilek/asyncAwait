@@ -4,12 +4,28 @@ namespace asyncAwait
 {
     internal class Program
     {
+        static void fucntionForThread() 
+        { 
+            for(int i = 0; i<1000; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+        
         static async Task Main(string[] args)
         {
+            //Thread
+            for(int i = 0; i<8; i++) 
+            {
+                new Thread(fucntionForThread).Start();
+            }
+            
+
+            //Task
             Egg eg = new();
             Bacon bac = new();
             Pat pat = new();
-            
+
             Stopwatch w = new();
             w.Start();
             Task<Egg> eggsTask = eg.FryEggsAsync();
