@@ -14,13 +14,20 @@ namespace asyncAwait
         
         static async Task Main(string[] args)
         {
-
+            List<Thread> threads = new List<Thread>();
             //Thread example
-            for(int i = 0; i<8; i++) 
+            for (int i = 0; i<5; i++) 
             {
-                new Thread(functionForThread).Start();
+                Thread t = new Thread(functionForThread);
+                t.Priority = (ThreadPriority)i;
+                t.Start();
+                threads.Add(t);
             }
-            
+
+            foreach(Thread thread in threads)
+            {
+                thread.Join();
+            }
 
             //Task example
             Egg eg = new();
