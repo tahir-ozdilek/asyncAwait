@@ -4,24 +4,25 @@ namespace asyncAwait
 {
     internal class Program
     {
-        static void fucntionForThread() 
+        static void functionForThread() 
         { 
             for(int i = 0; i<1000; i++)
             {
-                Console.WriteLine(i);
+                Console.WriteLine("Thread No: " + Thread.CurrentThread.ManagedThreadId + "    Output Number: " +i);
             }
         }
         
         static async Task Main(string[] args)
         {
-            //Thread
+
+            //Thread example
             for(int i = 0; i<8; i++) 
             {
-                new Thread(fucntionForThread).Start();
+                new Thread(functionForThread).Start();
             }
             
 
-            //Task
+            //Task example
             Egg eg = new();
             Bacon bac = new();
             Pat pat = new();
@@ -52,7 +53,6 @@ namespace asyncAwait
             Console.WriteLine("Pat is ready");
             w2.Stop();
             Console.WriteLine(w2.Elapsed.ToString());
-
         }
     }
 
@@ -76,6 +76,7 @@ namespace asyncAwait
             return new Bacon();
         }
     }
+
     public class Pat
     {
         public async Task<Pat> FryPatAsync()
