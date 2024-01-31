@@ -15,6 +15,12 @@
 
         public static Action<int, int> actionDelegate = actionFunction;
         public static Func<int, int, int> funcDelegate = funcFunction;
+        public static Predicate<string> predicateDelegate = predicateFunction;
+
+        static void actionFunction(int a, int b)
+        {
+            Console.WriteLine("actionFunction: " + (a + b));
+        }
 
         static int funcFunction(int a, int b)
         {
@@ -22,9 +28,10 @@
             return a + b;
         }
 
-        static void actionFunction(int a, int b)
+        static bool predicateFunction(string a)
         {
-            Console.WriteLine("actionFunction: " + (a + b));
+            Console.WriteLine("predicateFunction: " + a);
+            return true;
         }
 
         static void Main(string[] args)
@@ -46,8 +53,11 @@
             Console.WriteLine(boolDelegate2.Invoke(9,8));
             Console.WriteLine(boolDelegate2.Invoke(9,9));
 
+
             actionDelegate(2, 2); //actionDelegate.Invoke(2, 2);
             funcDelegate(2, 3); //funcDelegate.Invoke(2, 3);
+            Console.WriteLine(predicateDelegate("Our Argument For Predicate"));
+
 
             methodTakesFuncParameter(actionFunction);
 
