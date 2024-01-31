@@ -2,9 +2,11 @@
 {
     public class Program
     {
-        public delegate int MyDelegate(int a, int b);
+        public delegate int IntDelegate(int a, int b);
 
-        public delegate void MyDelegate2(int a, int b);
+        public delegate void VoidDelegate(int a, int b);
+       
+        public delegate bool BoolDelegate(int a, int b);
 
         public static int delegateFunction(int a, int b)
         {
@@ -28,15 +30,21 @@
 
         static void Main(string[] args)
         {
-            MyDelegate myDelegate = delegateFunction;
-            myDelegate(1, 2);
+            IntDelegate intDelegate = delegateFunction;
+            intDelegate(1, 2);
             
             actionDelegate(2, 2); //actionDelegate.Invoke(2, 2);
             funcDelegate(2, 3); //funcDelegate.Invoke(2, 3);
 
             //A delegate referencing to a anonymous method
-            MyDelegate2 myDelegate2 = (a, b) => { Console.WriteLine("inline anonymous:" + (a + b) ); };
-            myDelegate2(3, 3);
+            VoidDelegate voidDelegate = (a, b) => { Console.WriteLine("inline anonymous:" + (a + b) ); };
+            voidDelegate(3, 3);
+
+            //A delegate referencing to an expression
+            BoolDelegate boolDelegate = (a, b) => a == b;
+
+            Console.WriteLine(boolDelegate.Invoke(9,8));
+            Console.WriteLine(boolDelegate.Invoke(9,9));
 
             methodTakesFuncParameter(actionFunction);
 
