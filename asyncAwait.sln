@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asyncAwait", "asyncAwait\asyncAwait.csproj", "{325249C5-7560-4CB9-8038-1F1AD8D28C7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates", "Delegates\Delegates.csproj", "{45467AB8-06E0-48C8-9039-8BBDC0AED457}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates-Anonymous", "Delegates\Delegates-Anonymous.csproj", "{45467AB8-06E0-48C8-9039-8BBDC0AED457}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
