@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asyncAwait", "asyncAwait\as
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates-Anonymous", "Delegates\Delegates-Anonymous.csproj", "{45467AB8-06E0-48C8-9039-8BBDC0AED457}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoTest", "MongoTest\MongoTest.csproj", "{232D5C2E-03D4-4C16-AD0B-94A2AEF02CEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{45467AB8-06E0-48C8-9039-8BBDC0AED457}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45467AB8-06E0-48C8-9039-8BBDC0AED457}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45467AB8-06E0-48C8-9039-8BBDC0AED457}.Release|Any CPU.Build.0 = Release|Any CPU
+		{232D5C2E-03D4-4C16-AD0B-94A2AEF02CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{232D5C2E-03D4-4C16-AD0B-94A2AEF02CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{232D5C2E-03D4-4C16-AD0B-94A2AEF02CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{232D5C2E-03D4-4C16-AD0B-94A2AEF02CEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
