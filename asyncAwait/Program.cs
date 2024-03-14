@@ -8,7 +8,7 @@ namespace asyncAwait
         { 
             for(int i = 0; i<1000; i++)
             {
-                Console.WriteLine("Thread No: " + Thread.CurrentThread.ManagedThreadId + "    Output Number: " +i);
+                Console.WriteLine("Thread Priority: " + Thread.CurrentThread.Priority + "    Output Number: " +i);
             }
         }
         
@@ -16,7 +16,7 @@ namespace asyncAwait
         {
             List<Thread> threads = new List<Thread>();
             //Thread example
-            for (int i = 0; i<5; i++) 
+            for (int i = 4; i>=0; i--) 
             {
                 Thread t = new Thread(functionForThread);
                 t.Priority = (ThreadPriority)i;
